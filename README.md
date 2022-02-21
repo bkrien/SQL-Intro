@@ -65,7 +65,16 @@ VALUES (4, 'Profanity', 'Use of words believed to be profane or obscene');
 INSERT INTO book_bans 
 VALUES (5, 'Sexually Explicit', 'Portrayal or discussion of sex or sex education');
 ````
-Double check to see that all five records are there using the ```SELECT * from book_bans``` statement. 
+5. In double-checking your work with the ```SELECT * from book_bans``` statement, you notice that there is a mistmatch in the second record, with the BanName as "LGBTQ," while the description uses the acronym "LBTQIA+". To update this upse the ```UPDATE```, ```SET```, and ```WHERE``` statements to update the second record (where the BanID = 2:
+```
+UPDATE book_bans
+SET BanName = 'LGBTQIA+'
+WHERE BanID = 2
+```
+
+Run the query again with the ```SELECT * from book_bans``` statement in the __Qeary SQL__ window. If you see all five records, you've entered the data and commands correctly and can move onto Task Two. 
+
+### Task Two: 
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
