@@ -22,3 +22,4 @@ You can see what this looks like with an example that creates a small Persons ta
 
 
 ## Additional Resources
+W3Schools SQL Resource: https://www.w3schools.com/sql/
