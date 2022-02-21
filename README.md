@@ -17,7 +17,7 @@ We'll just be scratching the surface of what you can do with SQL in this lab. An
 For this lab, we'll be using a free, online database tool called [DB Fiddle](https://www.db-fiddle.com/). This tool will allow you to create and explore a small database using SQL, without the need to download any software or access a special server setup. DB Fiddle is useful because on a single screen it allows you to see the __Schema SQL__ (in the top left) that allows you to create and manipulate the data, the __Query SQL__ (in the top right) that allows you to control which results from this data are returned, and these __ Results__ (along the bottom). 
 
 You can see what this looks like with an example:
-![DB Fiddle Example](https://github.com/bkrien/SQL-Intro/screenshots/DB Fiddle Homescreen.png?raw=true)
+![DB Fiddle Example](https://github.com/bkrien/SQL-Intro/screenshots/DB\ Fiddle\ Homescreen.png?raw=true)
 
 
 
