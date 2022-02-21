@@ -32,7 +32,8 @@ Based on our conversation from last week, the first thing that you're going to d
 | 5 | Sexually Explicit | Portrayal or discussion of sex or sex education |
 
 1. To create the ban table, you will use the ```CREATE TABLE``` statemtn. Enter the following code into the __Schema SQL__ window (top left): 
-```Create Table book_bans (
+```
+Create Table book_bans (
     BanID int(2),
     BanName varchar(20),
     BanDescription varchar(255)
