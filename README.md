@@ -52,16 +52,20 @@ VALUES (1, 'Violence', 'Portrayals of physical or psychological violence or trau
 ```SELECT * from book_bans```
 If you see your record appear in the __Results__ window at the bottom of the screen, you've entered the information correctly. If not, circle back and make sure that you've entered the previous code exactly and that you've entered everything in the correct windows.  
 
+> **_NOTE:_** The asterisk in the this statement is a __wildcard operator__. In this case it will return all of the records in the a given table, though wildcard operatiors can be used in a number of ways. For more on wildcard operators, see: https://www.w3schools.com/sql/sql_wildcards.asp
 
+4. Enter the remaining book ban records into the book_bans table using the ```INSERT INTO``` statement. This time we'll do the remaining four all at once:
 ```
-INSERT INTO book_bans (
-VALUES (2, 'LQBTQIA+', 'Portrayal of LGBTQIA+ identities or individuals'),
-VALUES (3, 'Race', 'Portrayals of racial discrimination, hate, or violence'),
-VALUES (4, 'Profanity', 'Use of words believed to be profane or obscene'),
+INSERT INTO book_bans 
+VALUES (2, 'LQBTQIA+', 'Portrayal of LGBTQIA+ identities or individuals');
+INSERT INTO book_bans 
+VALUES (3, 'Race', 'Portrayals of racial discrimination, hate, or violence');
+INSERT INTO book_bans 
+VALUES (4, 'Profanity', 'Use of words believed to be profane or obscene');
+INSERT INTO book_bans 
 VALUES (5, 'Sexually Explicit', 'Portrayal or discussion of sex or sex education');
-
-
-
+````
+Double check to see that all five records are there using the ```SELECT * from book_bans``` statement. 
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
