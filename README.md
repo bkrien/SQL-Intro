@@ -36,7 +36,8 @@ Based on our conversation from last week, the first thing that you're going to d
     BanID int(2),
     BanName varchar(20),
     BanDescription varchar(255)
-    );```
+    );
+```
 
 
 
