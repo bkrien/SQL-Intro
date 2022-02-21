@@ -26,12 +26,12 @@ Based on our conversation from last week, the first thing that you're going to d
 | BanID | BanName | BanDescription |
 |-------|---------|----------------|
 | 1 | Violence | Portrayals of physical or psychological violence or trauma |
-| 2 | LQBTQIA+ | Portrayal of LGBTQIA+ identities or individuals |
+| 2 | LQBTQ | Portrayal of LGBTQIA+ identities or individuals |
 | 3 | Race | Portrayals of racial discrimination, hate, or violence |
 | 4 | Profanity | Use of words believed to be profane or obscene |
 | 5 | Sexually Explicit | Portrayal or discussion of sex or sex education |
 
-1. To create the ban table, you will use the ```CREATE TABLE``` statemtn. Enter the following code into the __Schema SQL__ window (top left): 
+1. To create the ban table, you will use the ```CREATE TABLE``` statement. Enter the following code into the __Schema SQL__ window (top left): 
 ```
 Create Table book_bans (
     BanID int(2),
@@ -41,6 +41,25 @@ Create Table book_bans (
 ```
 Then hit the "Run" button at the topic of the screen.
 > **_NOTE:_** In creating the table, you create each of your fields (BanID, BanName, BanDescription) and then idnetify the type and lenth of data that each of the fields will accept. The BanID field, for instance, will accept an integer that is two digits long (we could have gone with one digit, since our numbers only go through five, but we want to give ourselves room to expand if we need to in the future). The "varchar(20)" denotes that it can accept up to 20 various characters (letters, numbers, and special characters). For more on data types, see: https://www.w3schools.com/sql/sql_datatypes.asp
+
+2. Add the first ban reasion the book_bans table using the ```INSERT INTO``` statement. Enter the following code into the __Schema SQL__ window *below* the code that you entered in the previous step. 
+```
+INSERT INTO book_bans (BanID, BanName, BanDescription)
+VALUES (1, 'Violence', 'Portrayals of physical or psychological violence or trauma');
+```
+
+3. Check to see if the data has been correctly added to the database by using the ```SELECT``` statement. Enter the following code in the __Query SQL__ window (top right). 
+```SELECT * from book_bans```
+If you see your record appear in the __Results__ window at the bottom of the screen, you've entered the information correctly. If not, circle back and make sure that you've entered the previous code exactly and that you've entered everything in the correct windows.  
+
+
+```
+INSERT INTO book_bans (
+VALUES (2, 'LQBTQIA+', 'Portrayal of LGBTQIA+ identities or individuals'),
+VALUES (3, 'Race', 'Portrayals of racial discrimination, hate, or violence'),
+VALUES (4, 'Profanity', 'Use of words believed to be profane or obscene'),
+VALUES (5, 'Sexually Explicit', 'Portrayal or discussion of sex or sex education');
+
 
 
 
