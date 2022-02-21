@@ -39,6 +39,8 @@ Create Table book_bans (
     BanDescription varchar(255)
     );
 ```
+Then hit the "Run" button at the topic of the screen.
+> **_NOTE:_** In creating the table, you create each of your fields (BanID, BanName, BanDescription) and then idnetify the type and lenth of data that each of the fields will accept. The BanID field, for instance, will accept an integer that is two digits long (we could have gone with one digit, since our numbers only go through five, but we want to give ourselves room to expand if we need to in the future). The "varchar(20)" denotes that it can accept up to 20 various characters (letters, numbers, and special characters). For more on data types, see: https://www.w3schools.com/sql/sql_datatypes.asp
 
 
 
