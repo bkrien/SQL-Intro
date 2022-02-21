@@ -1,5 +1,5 @@
 # Introduction to Structured Query Language (SQL)
-In this lab, you will explore using the Structured Query Language (SQL, pronounced "sequel") to add, organize, and search through data. 
+In this lab, you will explore using the Structured Query Language (SQL, pronounced "sequel") to add, organize, and search through data by __creating your own SQL database__ of the banned book data that you've been developing and working with in class to this point. 
 
 ## What You'll Do
 1. Create and connect tables in using SQL
@@ -19,6 +19,17 @@ For this lab, we'll be using a free, online database tool called [DB Fiddle](htt
 You can see what this looks like with an example that creates a small Persons tables, adds a person, and then returns the resulting person along the bottom:
 ![DB Fiddle Example](/screenshots/DB_Fiddle_Homescreen.png)
 
+As you go through the process of 
+
+### Task 1: Create a Table of Bans/Challenges
+Based on our conversation from last week, the first thing that you're going to do is create a table that has the rationales for the bans and challenges that the groups developed in class last week. For the sake of simplicity, we're all going to use a standardized list and we're going to assign each of justifications provided a ```ReasonID``` that you can assign to the that you will load in in Task 2. This is the list of justifications that we'll use: 
+| BanID | BanName | BanDescription |
+|-------|---------|----------------|
+| 1 | Violence | Portrayals of physical or psychological violence or trauma |
+| 2 | LQBTQIA+ | Portrayal of LGBTQIA+ identities or individuals |
+| 3 | Race | Portrayals of racial discrimination, hate, or violence |
+| 4 | Profanity | Use of words believed to be profane or obscene |
+| 5 | Sexually Explicit | Portrayal or discussion of sex or sex education |
 
 
 ## Additional Resources
