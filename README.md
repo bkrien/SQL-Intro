@@ -30,6 +30,7 @@ Based on our conversation from last week, the first thing that you're going to d
 | 3 | Race | Portrayals of racial discrimination, hate, or violence |
 | 4 | Profanity | Use of words believed to be profane or obscene |
 | 5 | Sexually Explicit | Portrayal or discussion of sex or sex education |
+| 6 | Magic | Portrayals of witchcraft, the occult, or the supernatural |
 
 1. To create the ban table, you will use the ```CREATE TABLE``` statement. Enter the following code into the __Schema SQL__ window (top left): 
 ```
@@ -64,6 +65,8 @@ INSERT INTO book_bans
 VALUES (4, 'Profanity', 'Use of words believed to be profane or obscene');
 INSERT INTO book_bans 
 VALUES (5, 'Sexually Explicit', 'Portrayal or discussion of sex or sex education');
+INSERT INTO book_bans 
+VALUES (6, 'Magic', 'Portrayals of witchcraft, the occult, or the supernatural');
 ````
 
 5. In double-checking your work with the ```SELECT * from book_bans``` statement, you notice that there is a mistmatch in the second record, with the BanName as "LGBTQ," while the description uses the acronym "LBTQIA+". To update this upse the ```UPDATE```, ```SET```, and ```WHERE``` statements to update the second record (where the BanID = 2:
@@ -107,6 +110,7 @@ Enter all ten of your books. You can only select __one BanID__, so pick the one 
 
 If it looks like all your books have been added, proceed to Task Three. 
 
+## Task Three: Query the Data 
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
