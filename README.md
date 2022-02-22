@@ -113,7 +113,7 @@ If it looks like all your books have been added, congratulations on creating you
 You can now proceed to Task Three. 
 
 ## Task Three: Querying Data
-One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. 
+One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. While you have now created your own database, it is a relatively small one. 
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
