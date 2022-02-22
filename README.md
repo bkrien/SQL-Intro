@@ -113,7 +113,15 @@ If it looks like all your books have been added, congratulations on creating you
 You can now proceed to Task Three. 
 
 ## Task Three: Querying Data
-One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. While you have now created your own database, it is a relatively small one. 
+One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. While you have now created your own database, it is a relatively small one. To see how this can work at a larger scale, open up DB Fiddle again in a separate window on your browser (make sure to copy and save the contents of the Schema SQL window to submit as one of the deliverables for this lab). I've written the code for uploading a database of 500 books and their reviews from [Kaggle](https://www.kaggle.com/saurabhbagchi/books-dataset) in the GoodReadsData.txt file. You can open this file and copy all of the code (you can use the select-all keyboard shortcuts of CTR+A on PC or CMD+A on Mac) and copy and paste it into the __Schema SQL__ window and run the code. If it doesn't throw any errors (red boxes in the __Results__ window, you are good go to. If it does throw an error, double check that you've copied everything into from the file into the window by deleting everything in the window and repeating the process. 
+
+1. Look for books longer than 500 pages using the ```SELECT```, ```FROM```, and ```WHERE``` statements. These allow you to *select* the fields that you want returned *from* a specific table *where* one or more of the fields meet one or more criteria. Make sure that there is nothing in the __Query SQL__ window and add the following command:
+```
+SELECT Title, Author, Pages, Publisher
+FROM books
+WHERE Pages > 500
+```
+
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
