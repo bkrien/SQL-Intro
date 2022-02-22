@@ -108,9 +108,12 @@ Enter all ten of your books. You can only select __one BanID__, so pick the one 
 
 3. Double check that all ten of your books have been entered using the ```SELECT * from books``` statement. __Note__ that in the __Query SQL__ window, you should only have one statement at a time. While you will keep all of the code that you have run together in the __Schema SQL__ window, you will only have one query active at a time. Make sure that you get rid of the query for the book_bans table before running everything. 
 
-If it looks like all your books have been added, proceed to Task Three. 
+If it looks like all your books have been added, congratulations on creating your own database! __Copy or take a screenshot of all of the code in the Schema SQL window and put it into a word document or .txt file. You will upload this as one of the deliverables for this assignment.__ 
 
-## Task Three: Query the Data 
+You can now proceed to Task Three. 
+
+## Task Three: Querying Data
+One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. 
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
