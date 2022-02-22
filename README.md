@@ -25,6 +25,8 @@ For this lab, we'll be using a free, online database tool called [DB Fiddle](htt
 You can see what this looks like with an example that creates a small Persons tables, adds a person, and then returns the resulting person along the bottom:
 ![DB Fiddle Example](/screenshots/DB_Fiddle_Homescreen.png)
 
+**NOTE: Make sure that at the top of your screen, next to database, you have MySQL v. 8.0 selected**
+
 As you go through the process of adding and manipulating data, you'll be using bits of SQL. This code will appear in blocks like this one: 
 ```
 CREATE TABLE table
