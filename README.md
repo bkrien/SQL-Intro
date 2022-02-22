@@ -7,6 +7,12 @@ In this lab, you will explore using the Structured Query Language (SQL, pronounc
 3. Add data to populate the tables 
 4. Create queries to return records meeting specific criteria
 
+### Deliverables
+For this assignment, you will submit:
+1. A lab report
+2. The code that you use to build your database in the __Schema SQL__ window (this can be a screenshot or it can be copied and pasted into a Word document or text file)
+3. The code for two custom queries that you will write in __Task Three__ (this can also be submitted as a screen short of simply copied and pasted into a Word document or text file)
+
 ## Why It Matters
 SQL is one of the most common and most powerful ways to create, manage, and query data in a relational database. While most librarians don't need to master SQL in order to do their work, understanding how SQL works and, by extension, how relational databases are created, managed, and used is useful knowledge for those working in libraries or in any field that involves the organization of information.
 
@@ -19,7 +25,11 @@ For this lab, we'll be using a free, online database tool called [DB Fiddle](htt
 You can see what this looks like with an example that creates a small Persons tables, adds a person, and then returns the resulting person along the bottom:
 ![DB Fiddle Example](/screenshots/DB_Fiddle_Homescreen.png)
 
-As you go through the process of 
+As you go through the process of adding and manipulating data, you'll be using bits of SQL. This code will appear in blocks like this one: 
+```
+CREATE TABLE table
+```
+You'll be able to take these pieces of code and either add them into DB Fiddle directly, or add modifications (for your own data for instance) to make them run. You'll run the code by hitting the "Run" button at the top of the screen. If you run into errors, don't hesitate to ask for help or review the SQL documentation available at: https://www.w3schools.com/sql/default.asp. 
 
 ### Task 1: Create and Populate a Table of Bans/Challenges
 Based on our conversation from last week, the first thing that you're going to do is create a table that has the rationales for the bans and challenges that the groups developed in class last week. For the sake of simplicity, we're all going to use a standardized list and we're going to assign each of justifications provided a ```ReasonID``` that you can assign to the that you will load in in Task 2. This is the list of justifications that we'll use: 
@@ -115,13 +125,34 @@ You can now proceed to Task Three.
 ## Task Three: Querying Data
 One of the most powerful features of relational databases is that they allow you to explore large amounts of data very quickly. While you have now created your own database, it is a relatively small one. To see how this can work at a larger scale, open up DB Fiddle again in a separate window on your browser (make sure to copy and save the contents of the Schema SQL window to submit as one of the deliverables for this lab). I've written the code for uploading a database of 500 books and their reviews from [Kaggle](https://www.kaggle.com/saurabhbagchi/books-dataset) in the GoodReadsData.txt file. You can open this file and copy all of the code (you can use the select-all keyboard shortcuts of CTR+A on PC or CMD+A on Mac) and copy and paste it into the __Schema SQL__ window and run the code. If it doesn't throw any errors (red boxes in the __Results__ window, you are good go to. If it does throw an error, double check that you've copied everything into from the file into the window by deleting everything in the window and repeating the process. 
 
-1. Look for books longer than 500 pages using the ```SELECT```, ```FROM```, and ```WHERE``` statements. These allow you to *select* the fields that you want returned *from* a specific table *where* one or more of the fields meet one or more criteria. Make sure that there is nothing in the __Query SQL__ window and add the following command:
+1. __Write a Simple Query:__ Look for books longer than 500 pages using the ```SELECT```, ```FROM```, and ```WHERE``` statements. These allow you to *select* the fields that you want returned *from* a specific table *where* one or more of the fields meet one or more criteria. Make sure that there is nothing in the __Query SQL__ window and add the following command:
 ```
 SELECT Title, Author, Pages, Publisher
 FROM books
 WHERE Pages > 500
 ```
 
+2. __Write a Query with Multiple Criterion:__ Now lets look for books that are longer than 500 pages and that are a little more recent. We'll build on our previous query by adding in an ```AND``` statement. Modify the query in the __Query SQL__ window to match this: 
+
+```
+SELECT Title, Author, Pages, PublicationDate, Publisher
+FROM books
+WHERE Pages > 500 AND PublicationDate > '2005-01-01'
+```
+You can see now that the list of books included in the results is much shorter. We can also see that a good number of these books, including Tolkien's works and, most notably *The Odyssey* are listed, even though they were written long before 2005. This is because this data refers to specific editions, rather than the origninal text. We could potentially add another field, one that would include the publication date for the original, the first edition, or the first English language edition. 
+
+3. __Write a Query that Combined Tables__: One of the most powerful parts of relational databases is their ability to allow you to query data from multiple tables and look at the intersection. For this query, we want to find out the ratings of the books that were the results of our last query. We're going to have to look at both the books and the reviews table in order to do that. We'll use the same statements as last time, but this time we'll also add in the ```INNER JOIN``` and ```ON``` statements. Modify the query in the __Query SQL__ window to match this:
+```
+SELECT books.Title, books.Author, books.Pages, books.PublicationDate, reviews.Rating
+FROM books
+INNER JOIN reviews ON reviews.ISBN=books.ISBN
+WHERE books.Pages > 500 AND books.PublicationDate > '2005-01-01';
+```
+If the query was written correctly, you should see the same books from the previous query, but with the addition of a "Rating" column that tells you the rating of the book. 
+
+4. __Write Two Queries of your Own:__ You can write all sorts of queries and manipulate the data contained in a relational database in all sorts of ways using SQL. You can sort, average, and do a lot with the data. The final step of this assignment and this task is to write two queries of your own. These could be simple queries like the ones in the first step of this task or more complex ones like the ones created in the second and third steps—you can go whichever direction feels useful to you. Make sure that the queries return results (and make sure to clear the __Query SQL__ between queries) and you can just copy and paste the text of the queries into a Word document or text file and submit them with the assignment (it's also fine to include them at the bottom of your lab report if you want to submit everthing all together). 
+
+Once you've written your queries and successfully run them, you're done with the lab. __Congratulations__ on having successfully used SQL to create, organized, and manipulate data!
 
 ## Additional Resources
 W3Schools SQL Resource: https://www.w3schools.com/sql/
