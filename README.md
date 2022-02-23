@@ -116,6 +116,8 @@ Create Table books (
 INSERT INTO books
 VALUES ('The Hobbit', 'Tolkien, J.R.R.', '1827184', 2001, 1);
 ```
+**NOTE: You will need to insert this above the UPDATE code from Step 5 in the previous task**
+
 Enter all ten of your books. You can only select __one BanID__, so pick the one that seems like the best fit (this is a place where controlled vocabularies might be limiting). 
 
 3. Double check that all ten of your books have been entered using the ```SELECT * from books``` statement. __Note__ that in the __Query SQL__ window, you should only have one statement at a time. While you will keep all of the code that you have run together in the __Schema SQL__ window, you will only have one query active at a time. Make sure that you get rid of the query for the book_bans table before running everything. 
